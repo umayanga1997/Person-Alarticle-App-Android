@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_shadow"
+    >
+
+    <!-- A CardView that contains a TextView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/article_card"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/title_card_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title of Article" />
+
+            <TextView
+                android:id="@+id/writer_card_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_card_txt"
+                android:text="Writer of the Article"
+                android:textColor="@color/grey" />
+            <ImageView
+                android:id="@+id/thumbnail_card_img"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/nothumbnail"
+                android:scaleType="centerCrop"
+                android:layout_below="@id/writer_card_txt"
+                android:layout_marginTop="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/article_card_edit_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="-24dp"
+                android:layout_toEndOf="@+id/title_card_txt"
+                card_view:srcCompat="@drawable/ic_edit" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

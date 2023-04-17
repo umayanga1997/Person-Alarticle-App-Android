@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.openlab.personalarticle.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <activity
+        android:id="@+id/nav_add_edit"
+        android:name="com.openlab.personalarticle.screen.AddEditActivity"
+        android:label="@string/menu_add_edit"
+        tools:layout="@layout/activity_add_edit" />
+
+    <activity
+        android:id="@+id/nav_settings"
+        android:name="com.openlab.personalarticle.screen.SettingsActivity"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/activity_settings" />
+    <activity
+        android:id="@+id/nav_view_my_articles"
+        android:name="com.openlab.personalarticle.screen.MyArticlesActivity"
+        android:label="@string/menu_my_articles"
+        tools:layout="@layout/activity_my_articles" />
+    <activity
+        android:id="@+id/nav_profile"
+        android:name="com.openlab.personalarticle.screen.ProfileActivity"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/activity_profile" />
+</navigation>
